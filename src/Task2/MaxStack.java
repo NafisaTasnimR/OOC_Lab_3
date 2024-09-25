@@ -16,11 +16,10 @@ public class MaxStack {
     public void push(int x) {
         MainStack.push(x);
 
-        if (MinStack.isEmpty() || x >= MinStack.peek()) {
+        if (MinStack.isEmpty() || x <= MinStack.peek()) {
             MinStack.push(x);
         }
-
-        if (MaxStack.isEmpty() || x <= MaxStack.peek()) {
+        if (MaxStack.isEmpty() || x >= MaxStack.peek()) {
             MaxStack.push(x);
         }
     }
@@ -29,7 +28,6 @@ public class MaxStack {
         if (MainStack.isEmpty()) {
             throw new RuntimeException("Empty stack");
         }
-
         int val = MainStack.pop();
 
         if (val == MinStack.peek()) {
