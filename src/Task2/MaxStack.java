@@ -25,4 +25,27 @@ public class MaxStack {
         }
     }
 
+    public int pop() {
+        if (MainStack.isEmpty()) {
+            throw new RuntimeException("Empty stack");
+        }
+
+        int val = MainStack.pop();
+
+        if (val == MinStack.peek()) {
+            MinStack.pop();
+        }
+        if (val == MaxStack.peek()) {
+            MaxStack.pop();
+        }
+        return val;
+    }
+
+    public int max() {
+        if (MaxStack.isEmpty()) {
+            throw new RuntimeException("Empty stack");
+        }
+        return MaxStack.peek();
+    }
+
 }
