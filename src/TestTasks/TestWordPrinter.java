@@ -10,7 +10,17 @@ public class TestWordPrinter {
     public void testPrinter1()
     {
         String s = "Even";
+        int n = 2;
         NumWordPrinter numWordPrinter = new NumWordPrinter();
-        assertEquals(s,numWordPrinter.printWord());
+        assertEquals(s,numWordPrinter.printWord(n));
+    }
+
+    @Test
+    public void testPrinter2()
+    {
+        String s = "PrimeEleven";
+        int n = 33;
+        NumWordPrinter numWordPrinter = new NumWordPrinter();
+        assertEquals(s,numWordPrinter.printWord(n));
     }
 }
