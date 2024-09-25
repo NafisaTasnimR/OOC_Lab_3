@@ -2,8 +2,17 @@ package Task1;
 
 public class NumWordPrinter {
     public NumWordPrinter(){}
-    public String printWord()
+    public String printWord(int n)
     {
-        return "Even";
+        if(n%2 == 0) {
+            return "Even";
+        }
+        else if(n%11 == 0){
+            return "PrimeEleven";
+        }
+        else
+        {
+            return "LuckyThirteen";
+        }
     }
 }

@@ -23,4 +23,13 @@ public class TestWordPrinter {
         NumWordPrinter numWordPrinter = new NumWordPrinter();
         assertEquals(s,numWordPrinter.printWord(n));
     }
+
+    @Test
+    public void testPrinter3()
+    {
+        String s = "LuckyThirteen";
+        int n = 69;
+        NumWordPrinter numWordPrinter = new NumWordPrinter();
+        assertEquals(s,numWordPrinter.printWord(n));
+    }
 }
